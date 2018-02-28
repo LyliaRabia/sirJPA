@@ -24,14 +24,14 @@ public class Person {
 		this.prenom = prenom;
 		this.mail = mail;
 	}
-	
+
 	public Person(String nom, String prenom, String mail, Collection<ElectronicDevice> devices) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.mail = mail;
 		this.devices = devices;
 	}
-	
+
 	public Person(String nom, String prenom, String mail, Collection<Home> homes, Collection<Person> friends, Collection<ElectronicDevice> devices) {
 		this.nom = nom;
 		this.prenom = prenom;
