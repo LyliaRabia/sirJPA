@@ -10,39 +10,21 @@ import javax.persistence.OneToMany;
 
 public class Heater {
 
-	private int temperatureMinimale;
+	private int consoMoyenne;
 	
-	private int temperatureMaximale;
+	private String name;
 	
-	private String energie;
-	
-	public Heater(String name, int tempMin, int tempMax) {
-		this.temperatureMinimale = tempMin;
-		this.temperatureMaximale = tempMax;
+	public Heater(String nom, int conso) {
+		this.name = nom;
+		this.consoMoyenne = conso;
 	}
 
-	public int getTemperatureMinimale() {
-		return temperatureMinimale;
+	public int getConsoMoyenne() {
+		return consoMoyenne;
 	}
 
-	public void setTemperatureMinimale(int temperatureMinimale) {
-		this.temperatureMinimale = temperatureMinimale;
+	public void setConsoMoyenne(int consoMoyenne1) {
+		this.consoMoyenne = consoMoyenne1;
 	}
 
-	public int getTemperatureMaximale() {
-		return temperatureMaximale;
-	}
-
-	public void setTemperatureMaximale(int temperatureMaximale) {
-		this.temperatureMaximale = temperatureMaximale;
-	}
-
-	public String getEnergie() {
-		return energie;
-	}
-
-	public void setEnergie(String energie) {
-		this.energie = energie;
-	}
-	
 }
