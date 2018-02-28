@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
 
 @Entity
 public class Home {
@@ -54,7 +55,7 @@ public class Home {
 	}
 
 	@JsonIgnore
-	@OneToMany(mappedBy="home", cascade = CascadeType.PERSIST)
+	@OneToMany(mappedBy="home",cascade = CascadeType.PERSIST)
 	public Collection<Heater> getHeaters() {
 		return heaters;
 	}
