@@ -4,23 +4,24 @@ import java.util.List;
 
 import javax.persistence.*;
 
+@Entity
 public class Heater {
 
 	private long id;
 	private String nom;
-	private int consoMoyenne;
+	private int consoMoyenneWattPerH;
 	private Home home;
 
 	public Heater() {}
 
 	public Heater(String nom, int conso) {
 		this.nom = nom;
-		this.consoMoyenne = conso;
+		this.consoMoyenneWattPerH = conso;
 	}
 
 	public Heater(String nom, int conso, Home home) {
 		this.nom = nom;
-		this.consoMoyenne = conso;
+		this.consoMoyenneWattPerH = conso;
 		this.home = home;
 	}
 
@@ -42,12 +43,12 @@ public class Heater {
 		this.nom = nom;
 	}
 
-	public int getConsoMoyenne() {
-		return consoMoyenne;
+	public int getConsoMoyenneWattPerH() {
+		return consoMoyenneWattPerH;
 	}
 
-	public void setConsoMoyenneWattPerH(int consoMoyenne1) {
-		this.consoMoyenne = consoMoyenne1;
+	public void setConsoMoyenneWattPerH(int consoMoyenneWattPerH) {
+		this.consoMoyenneWattPerH = consoMoyenneWattPerH;
 	}
 
 	@ManyToOne
@@ -61,7 +62,7 @@ public class Heater {
 
 	@Override
 	public String toString() {
-		return "Heater [nom=" + nom + ", consoMoyenneWattPerH=" + consoMoyenne + "]";
+		return "Heater [nom=" + nom + ", consoMoyenneWattPerH=" + consoMoyenneWattPerH + "]";
 	}
 
 }
