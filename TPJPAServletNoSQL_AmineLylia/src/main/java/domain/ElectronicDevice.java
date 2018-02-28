@@ -2,16 +2,15 @@ package domain;
 
 import javax.persistence.*;
 
-public class ElectronicDevice {
 	@Entity
-	public class ElectronicDevices {
+	public class ElectronicDevice {
 	 
 		private String nom;
 		private long id;
 		private int conso;
 		private Person person;
 		
-		public ElectronicDevices(String nom, int conso, Person person){
+		public ElectronicDevice(String nom, int conso, Person person){
 			this.nom = nom;
 			this.conso = conso;
 			this.person = person;
@@ -46,4 +45,3 @@ public class ElectronicDevice {
 			this.person=owner;
 		}
 	}
-}
