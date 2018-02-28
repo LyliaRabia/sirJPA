@@ -9,19 +9,28 @@ public class Heater {
 
 	private long id;
 	private String nom;
-	private int consoMoyenneWattPerH;
+
+	public int getConsoMoyenne() {
+		return consoMoyenne;
+	}
+
+	public void setConsoMoyenne(int consoMoyenne) {
+		this.consoMoyenne = consoMoyenne;
+	}
+
+	private int consoMoyenne;
 	private Home home;
 
 	public Heater() {}
 
 	public Heater(String nom, int conso) {
 		this.nom = nom;
-		this.consoMoyenneWattPerH = conso;
+		this.consoMoyenne = conso;
 	}
 
 	public Heater(String nom, int conso, Home home) {
 		this.nom = nom;
-		this.consoMoyenneWattPerH = conso;
+		this.consoMoyenne = conso;
 		this.home = home;
 	}
 
@@ -43,13 +52,7 @@ public class Heater {
 		this.nom = nom;
 	}
 
-	public int getConsoMoyenneWattPerH() {
-		return consoMoyenneWattPerH;
-	}
 
-	public void setConsoMoyenneWattPerH(int consoMoyenneWattPerH) {
-		this.consoMoyenneWattPerH = consoMoyenneWattPerH;
-	}
 
 	@ManyToOne
 	public Home getHome() {
@@ -62,7 +65,7 @@ public class Heater {
 
 	@Override
 	public String toString() {
-		return "Heater [nom=" + nom + ", consoMoyenneWattPerH=" + consoMoyenneWattPerH + "]";
+		return "Heater [nom=" + nom + ", consoMoyenne =" + consoMoyenne + "]";
 	}
 
 }
